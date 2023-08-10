@@ -121,14 +121,14 @@
 
     <!-- working area for admin  -->
 
-    <div class="container">
+      <div class="container">
         <h2 class="text-center bold bottom-border">Record Daily Attendance of Students</h2>
     </div>
     <div class="container">
 
         <div class="mb-3 ">
             <label for="formGroupExampleInput2" class="form-label">Enter Student Roll Number</label>
-            <input type="number" class="form-control" id="attendanceroll">
+            <input type="text" class="form-control" id="attendanceroll">
         </div>
         <div class="mb-3 ">
             <label for="formGroupExampleInput2" class="form-label">Select Attendance Date</label>
@@ -144,10 +144,16 @@
                     Present
                 </label>
             </div>
-            <div class="form-check">
+            <div class="form-check me-4">
                 <input class="form-check-input" type="radio" name="attendancestatus" id="absent" value="Absent">
                 <label class="form-check-label" for="absent">
                     Absent
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="attendancestatus" id="late" value="Late">
+                <label class="form-check-label" for="late">
+                    Late
                 </label>
             </div>
 
@@ -157,7 +163,6 @@
 
     </div>
     </div>
-
 
     <script>
         const addstdbtn = document.getElementById("attendancbtn")
