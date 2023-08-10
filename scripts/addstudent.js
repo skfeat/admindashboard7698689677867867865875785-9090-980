@@ -9,7 +9,12 @@ async function addnewstudent() {
     const addstdroll = document.getElementById("addstdroll").value;
     const addstdpass = document.getElementById("addstdpass").value;
     const addstdemail = document.getElementById("addstdemail").value;
-
+    
+    const welcomedata = {
+        email : addstdemail,
+        password:addstdpass,
+        roll:addstdroll
+    }
     console.log(addstdclass, addstdname, addstdpass, addstdroll);
     const email = {
         "email": addstdemail
@@ -23,12 +28,28 @@ async function addnewstudent() {
             body: JSON.stringify(email)
         });
         const data = await response.json();
-        console.log(data);
-
         if (response.ok) {
             addstdbtn.innerText = "Added";
             addstdbtn.classList.add("bg-success", "text-white", "border", "border-success");
-
+            try {
+                const response = await fetch(`https://server-as2k.onrender.com/24278welcomemail`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(welcomedata)
+                });
+                const data = await response.json();
+        
+        
+                if (response.ok) {              
+                      alert("Welcome Email with Username and password sent to the student")
+                } else {
+                alert("Problem ocuur while delivering welcome email")
+                }
+            } catch (error) {
+                console.error("Error:", error);
+            }   
        
 
         } else {
