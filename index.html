@@ -41,54 +41,14 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
           <li class="nav-item">
             <a class="underline-animation alink bold" id="nonvisiblenote" aria-current="page"
-              onclick="notes()">Notes</a>
-            <script>
-              function notes() {
-                const token = localStorage.getItem('token');
-
-                if (token) {
-                  window.location.href = 'notes.html'
-                } else {
-                  $('#custom-alert-modal').modal('show');
-                }
-              }
-            </script>
-            <!-- Modal -->
-            <div class="modal fade" id="custom-alert-modal" tabindex="-1" aria-labelledby="custom-alert-modal-label"
-              aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h3 class="modal-title fs-5 bold" id="exampleModalLabel">Access Restricted</h3>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <h6>To view notes you must log in your account first</h6>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Okay</button>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- log in modal -->
+               href="signup.html">Sign up</a>
+           
+  
           </li>
           <li class="nav-item">
-            <a class="underline-animation alink bold " aria-current="page" onclick="result()">Result</a>
+            <a class="underline-animation alink bold" href="addmarks.html" aria-current="page">Add Marks</a>
 
-            <script>
-              function result() {
-                const token = localStorage.getItem('token');
 
-                if (token) {
-                  window.location.href = 'result.html'
-                } else {
-                  $('#custom-alert-modal1').modal('show');
-                }
-              }
-            </script>
             <!-- Modal -->
             <div class="modal fade" id="custom-alert-modal1" tabindex="-1" aria-labelledby="custom-alert-modal-label"
               aria-hidden="true">
@@ -112,7 +72,7 @@
 
           <li class="nav-item">
             <a class="underline-animation alink bold" id="nonvisiblenote" aria-current="page"
-              onclick="attendance()">Attendance</a>
+             href="updateallnotes.html" >Give Notes</a>
             <script>
               function attendance() {
                 const token = localStorage.getItem('token');
@@ -144,23 +104,16 @@
               </div>
             </div>
           <li class="nav-item">
-            <a class="underline-animation alink bold" aria-current="page" href="notice.html">Notice</a>
+            <a class="underline-animation alink bold" aria-current="page" href="makeattendance.html">Attendance</a>
           </li>
           <li class="nav-item">
-            <a class="underline-animation alink bold" aria-current="page" href="course.html">Courses</a>
+            <a class="underline-animation alink bold" aria-current="page" href="allstudents.html">All Data</a>
           </li>
           <li class="nav-item">
-            <a class="underline-animation alink bold" aria-current="page" href="about.html">About</a>
+            <a class="underline-animation alink bold" aria-current="page" href="delete.html">Delete</a>
           </li>
 
         </ul>
-        <div class="d-flex">
-
-          <button disabled class="btn btn-warning custom-border"
-            href="admindashboard-token=908172301748172894347290374.html"><i class="fa-solid fa-database"></i>
-            Dashboard</button>
-
-        </div>
 
       </div>
     </div>
