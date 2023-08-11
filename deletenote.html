@@ -2,171 +2,124 @@
 <html lang="en">
 
 <head>
-        <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8Z8YVWX9ZJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Z8YVWX9ZJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-8Z8YVWX9ZJ');
-</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/mediaqueries.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="shortcut icon" href="https://i.ibb.co/B3Wd2Wd/IMG-20230807-WA0020.jpg" type="image/x-icon">
+    gtag('config', 'G-8Z8YVWX9ZJ');
+  </script>
+  <meta charset="UTF-8">
 
-    <title>Credible Classes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/mediaqueries.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="shortcut icon" href="https://i.ibb.co/B3Wd2Wd/IMG-20230807-WA0020.jpg" type="image/x-icon">
+  <link rel="manifest" href="/manifest.json">
+  <title>Admin Dashboard</title>
 </head>
 
 <body>
 
 
-    <nav class="navbar navbar-expand-lg d-flex justify-content-between mb-4">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-   <img src="newlogo.png" alt="Credeible-2-1" alt="Credeible-1" alt="Logo" width="180" height="50"
-                    class="d-inline-block align-text-top">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse mx-md-3" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                    <li class="nav-item">
-                        <a class="underline-animation alink bold" id="nonvisiblenote" aria-current="page"
-                            onclick="notes()">Notes</a>
-                        <script>
-                            function notes() {
-                                const token = localStorage.getItem('token');
+  <nav class="navbar navbar-expand-lg d-flex justify-content-between mb-4">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="newlogo.png" alt="Credeible-2-1" alt="Credeible-1" alt="Logo" width="180" height="50"
+          class="d-inline-block align-text-top" onclick="window.location.href='index.html'">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse mx-md-3" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+          <li class="nav-item">
+            <a class="underline-animation alink bold" id="nonvisiblenote" aria-current="page" href="signup.html">Sign
+              up</a>
 
-                                if (token) {
-                                    window.location.href = 'notes.html'
-                                } else {
-                                    $('#custom-alert-modal').modal('show');
-                                }
-                            }
-                        </script>
-                        <!-- Modal -->
-                        <div class="modal fade" id="custom-alert-modal" tabindex="-1"
-                            aria-labelledby="custom-alert-modal-label" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h3 class="modal-title fs-5 bold" id="exampleModalLabel">Access Restricted</h3>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <h6>To view notes you must log in your account first</h6>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-warning"
-                                            data-bs-dismiss="modal">Okay</button>
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+          </li>
+          <li class="nav-item">
+            <a class="underline-animation alink bold" href="addmarks.html" aria-current="page">Add Marks</a>
 
-                        <!-- log in modal -->
-                    </li>
-                    <li class="nav-item">
-                        <a class="underline-animation alink bold " aria-current="page" onclick="result()">Result</a>
 
-                        <script>
-                            function result() {
-                                const token = localStorage.getItem('token');
+            <!-- Modal -->
+            <div class="modal fade" id="custom-alert-modal1" tabindex="-1" aria-labelledby="custom-alert-modal-label"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h3 class="modal-title fs-5 bold" id="exampleModalLabel">Access Restricted</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <h6>To check your result you must log in your account first</h6>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Okay</button>
 
-                                if (token) {
-                                    window.location.href = 'result.html'
-                                } else {
-                                    $('#custom-alert-modal1').modal('show');
-                                }
-                            }
-                        </script>
-                        <!-- Modal -->
-                        <div class="modal fade" id="custom-alert-modal1" tabindex="-1"
-                            aria-labelledby="custom-alert-modal-label" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h3 class="modal-title fs-5 bold" id="exampleModalLabel">Access Restricted</h3>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <h6>To check your result you must log in your account first</h6>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-warning"
-                                            data-bs-dismiss="modal">Okay</button>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="underline-animation alink bold" id="nonvisiblenote" aria-current="page"
-                            onclick="attendance()">Attendance</a>
-                        <script>
-                            function attendance() {
-                                const token = localStorage.getItem('token');
-
-                                if (token) {
-                                    window.location.href = 'attendance.html'
-                                } else {
-                                    $('#custom-alert-modal3').modal('show');
-                                }
-                            }
-                        </script>
-                        <!-- Modal -->
-                        <div class="modal fade" id="custom-alert-modal3" tabindex="-1"
-                            aria-labelledby="custom-alert-modal-label" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                  <div class="modal-header">
-                                    <h3 class="modal-title fs-5 bold" id="exampleModalLabel">Access Restricted</h3>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                  </div>
-                                  <div class="modal-body">
-                                  <h6>To view your Attendance you must log in your account</h6>  
-                                  </div>
-                                  <div class="modal-footer">
-                                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Okay</button>
-                                  
-                                  </div>
-                                </div>
-                              </div>
-                        </div>
-                    <li class="nav-item">
-                        <a class="underline-animation alink bold" aria-current="page" href="notice.html">Notice</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="underline-animation alink bold" aria-current="page" href="course.html">Courses</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="underline-animation alink bold" aria-current="page" href="about.html">About</a>
-                    </li>
-
-                </ul>
-                <div class="d-flex">
-
-                    <a class="btn btn-warning custom-border" href="admindashboard-token=908172301748172894347290374.html"><i class="fa-solid fa-database"></i> Dashboard</a>
-
+                  </div>
                 </div>
-
+              </div>
             </div>
-        </div>
-        </div>
-    </nav>
+          </li>
+
+          <li class="nav-item">
+            <a class="underline-animation alink bold" id="nonvisiblenote" aria-current="page"
+              href="updateallnotes.html">Give Notes</a>
+            <script>
+              function attendance() {
+                const token = localStorage.getItem('token');
+
+                if (token) {
+                  window.location.href = 'attendance.html'
+                } else {
+                  $('#custom-alert-modal3').modal('show');
+                }
+              }
+            </script>
+            <!-- Modal -->
+            <div class="modal fade" id="custom-alert-modal3" tabindex="-1" aria-labelledby="custom-alert-modal-label"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h3 class="modal-title fs-5 bold" id="exampleModalLabel">Access Restricted</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <h6>To view your Attendance you must log in your account</h6>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Okay</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          <li class="nav-item">
+            <a class="underline-animation alink bold" aria-current="page" href="makeattendance.html">Attendance</a>
+          </li>
+          <li class="nav-item">
+            <a class="underline-animation alink bold" aria-current="page" href="allstudents.html">All Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="underline-animation alink bold" aria-current="page" href="delete.html">Delete</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+    </div>
+  </nav>
+
 
     <!-- working area for admin  cope from here  -->
 
