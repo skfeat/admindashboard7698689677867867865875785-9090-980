@@ -166,8 +166,7 @@ async function DeleteNote() {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
+            }
         });
 
         const responseData = await response.json();
@@ -203,9 +202,6 @@ async function DeleteNote() {
 
 
     <!-- working area for admin  -->
-    <script src="scripts/updateallnote.js"></script>
-    <script src="scripts/addmarks.js"></script>
-    <script src="scripts/loginapi.js">
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="scripts/index.js">
